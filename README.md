@@ -1,50 +1,156 @@
-# Welcome to your Expo app 👋
+# 🍎💧 Food & Water Tracker - Yiyecek ve Su Takip Uygulaması
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Bu proje, kullanıcıların günlük yiyecek ve su tüketimlerini takip edebilecekleri bir React Native Expo uygulamasıdır. Firebase Authentication ve Realtime Database kullanılarak geliştirilmiştir.
 
-## Get started
+## 📱 Özellikler
 
-1. Install dependencies
+✅ **Kullanıcı Yönetimi**
+- Firebase Authentication ile güvenli giriş/kayıt sistemi
+- E-posta ve şifre ile hesap oluşturma
 
+✅ **Yiyecek Takibi**
+- Günlük yiyecek ekleme
+- Kalori ve makro besin takibi
+- Yemek geçmişini görüntüleme
+
+✅ **Su Takibi**
+- Günlük su tüketimi kaydı
+- Su içme hedefi belirleme
+- Su tüketim grafikları
+
+✅ **Kişisel Veriler**
+- Kullanıcıya özel veri saklama
+- Geçmiş veriler görüntüleme
+- Çevrimdışı çalışma desteği
+
+## 🛠 Teknolojiler
+
+- **React Native** - Mobil uygulama framework'ü
+- **Expo** - React Native geliştirme platformu
+- **TypeScript** - Tip güvenli JavaScript
+- **Firebase Authentication** - Kullanıcı doğrulama
+- **Firebase Realtime Database** - Gerçek zamanlı veri tabanı
+- **React Navigation** - Sayfa yönlendirmeleri
+- **Expo Router** - Dosya tabanlı yönlendirme
+
+## 🚀 Kurulum ve Çalıştırma
+
+1. **Bağımlılıkları yükleyin:**
    ```bash
    npm install
    ```
 
-2. Start the app
+2. **Firebase konfigürasyonunu kontrol edin:**
+   - `services/firebaseService.ts` dosyasını kontrol edin
+   - Firebase projenizin yapılandırmasını doğrulayın
 
+3. **Uygulamayı başlatın:**
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Uygulamayı test edin:**
+   - Expo Go uygulamasını telefonunuza indirin
+   - QR kodu tarayarak uygulamayı açın
+   - Alternatif olarak Android/iOS emülatörü kullanın
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📊 Veritabanı Yapısı
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Firebase Realtime Database kullanılmıştır:
 
-## Get a fresh project
+```
+/users
+  /{userId}
+    /foodLogs
+      /{logId}
+        - foodName: string
+        - calories: number
+        - date: string
+        - macros: object
+    /waterLogs
+      /{logId}
+        - amount: number
+        - date: string
+        - time: string
+```
 
-When you're ready, run:
+## 🔒 Güvenlik
+
+- Firebase Security Rules ile kullanıcılar sadece kendi verilerine erişebilir
+- Tüm veriler kullanıcı bazında ayrılmıştır
+- E-posta/şifre ile güvenli kimlik doğrulama
+
+## 🧪 Test Bilgileri
+
+Test için hazır hesap:
+- **E-posta:** deneme@gmail.com
+- **Şifre:** deniz67
+
+## 📱 Derleme ve Dağıtım
+
+Uygulama EAS Build kullanılarak APK formatında derlenebilir:
 
 ```bash
+# EAS CLI yükleyin
+npm install -g @expo/eas-cli
+
+# Build başlatın
+eas build --platform android
+```
+
+## 🎯 Diğer Komutlar
+
+```bash
+# Android emülatörde çalıştır
+npm run android
+
+# iOS simülatörde çalıştır
+npm run ios
+
+# Web'de çalıştır
+npm run web
+
+# Testleri çalıştır
+npm test
+
+# Kodu düzenle (lint)
+npm run lint
+
+# Projeyi sıfırla
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📁 Proje Yapısı
 
-## Learn more
+```
+├── app/                    # Ana uygulama dosyaları
+│   ├── (tabs)/            # Tab navigasyon sayfaları
+│   ├── _layout.tsx        # Ana layout
+│   └── login.tsx          # Giriş sayfası
+├── components/            # Tekrar kullanılabilir bileşenler
+├── services/              # Firebase servisleri
+├── hooks/                 # Custom React hooks
+├── constants/             # Sabitler ve yapılandırmalar
+├── assets/                # Resimler ve statik dosyalar
+└── scripts/               # Yardımcı scriptler
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🤝 Katkıda Bulunma
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Projeyi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Add amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
 
-## Join the community
+## 📄 Lisans
 
-Join our community of developers creating universal apps.
+Bu proje eğitim amaçlı geliştirilmiştir.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📞 İletişim
+
+Herhangi bir sorunuz veya öneriniz için lütfen iletişime geçin.
+
+---
+
+**Not:** Bu uygulama tamamen fonksiyonel durumda olup, tüm özellikler test edilmiştir.
