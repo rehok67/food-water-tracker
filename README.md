@@ -33,26 +33,7 @@ Bu proje, kullanıcıların günlük yiyecek ve su tüketimlerini takip edebilec
 - **React Navigation** - Sayfa yönlendirmeleri
 - **Expo Router** - Dosya tabanlı yönlendirme
 
-## 🚀 Kurulum ve Çalıştırma
 
-1. **Bağımlılıkları yükleyin:**
-   ```bash
-   npm install
-   ```
-
-2. **Firebase konfigürasyonunu kontrol edin:**
-   - `services/firebaseService.ts` dosyasını kontrol edin
-   - Firebase projenizin yapılandırmasını doğrulayın
-
-3. **Uygulamayı başlatın:**
-   ```bash
-   npx expo start
-   ```
-
-4. **Uygulamayı test edin:**
-   - Expo Go uygulamasını telefonunuza indirin
-   - QR kodu tarayarak uygulamayı açın
-   - Alternatif olarak Android/iOS emülatörü kullanın
 
 ## 📊 Veritabanı Yapısı
 
@@ -80,11 +61,6 @@ Firebase Realtime Database kullanılmıştır:
 - Tüm veriler kullanıcı bazında ayrılmıştır
 - E-posta/şifre ile güvenli kimlik doğrulama
 
-## 🧪 Test Bilgileri
-
-Test için hazır hesap:
-- **E-posta:** deneme@gmail.com
-- **Şifre:** deniz67
 
 ## 📱 Derleme ve Dağıtım
 
@@ -98,27 +74,7 @@ npm install -g @expo/eas-cli
 eas build --platform android
 ```
 
-## 🎯 Diğer Komutlar
 
-```bash
-# Android emülatörde çalıştır
-npm run android
-
-# iOS simülatörde çalıştır
-npm run ios
-
-# Web'de çalıştır
-npm run web
-
-# Testleri çalıştır
-npm test
-
-# Kodu düzenle (lint)
-npm run lint
-
-# Projeyi sıfırla
-npm run reset-project
-```
 
 ## 📁 Proje Yapısı
 
@@ -135,22 +91,9 @@ npm run reset-project
 └── scripts/               # Yardımcı scriptler
 ```
 
-## 🤝 Katkıda Bulunma
 
-1. Projeyi fork edin
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add amazing feature'`)
-4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
 
 ## 📄 Lisans
 
 Bu proje eğitim amaçlı geliştirilmiştir.
 
-## 📞 İletişim
-
-Herhangi bir sorunuz veya öneriniz için lütfen iletişime geçin.
-
----
-
-**Not:** Bu uygulama tamamen fonksiyonel durumda olup, tüm özellikler test edilmiştir.
