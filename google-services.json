@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "162613110062",
+    "project_id": "ios-projesi-food-logger",
+    "storage_bucket": "ios-projesi-food-logger.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162613110062:android:6e929ad985a296d9d546bf",
+        "android_client_info": {
+          "package_name": "com.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCtDb62S0DCmBWmzVX4Zsm8lD21qgUvuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,75 @@
+FOOD & WATER TRACKER - REACT NATIVE EXPO UYGULAMASI
+=========================================================
+
+PROJE ÖZETI:
+------------
+Bu proje, kullanıcıların günlük yiyecek ve su tüketimlerini takip edebilecekleri 
+bir React Native Expo uygulamasıdır. Firebase Authentication ve Realtime Database 
+kullanılarak geliştirilmiştir.
+
+TEMEL ÖZELLİKLER:
+-----------------
+✅ Kullanıcı kayıt/giriş sistemi (Firebase Auth)
+✅ Yiyecek ekleme ve kalori/makro takibi
+✅ Su tüketimi takibi
+✅ Günlük hedef belirleme
+✅ Geçmiş veriler görüntüleme
+✅ Kullanıcıya özel veri saklama
+✅ Çevrimdışı çalışma desteği
+
+TEKNOLOJİLER:
+--------------
+- React Native (Expo)
+- TypeScript
+- Firebase Authentication
+- Firebase Realtime Database
+- React Navigation
+- Expo Router
+
+KURULUM VE ÇALIŞTIRMA:
+----------------------
+1. npm install
+2. Firebase config dosyasını kontrol edin (services/firebaseService.ts)
+3. expo start
+4. Expo Go uygulamasıyla QR kodu tarayın
+
+VERİTABANI YAPISI:
+------------------
+Firebase Realtime Database kullanılmıştır.
+Veri yapısı:
+/users/{userId}/foodLogs/{logId}
+/users/{userId}/waterLogs/{logId}
+
+Her kullanıcının verisi ayrı ayrı saklanır ve sadece kendi verilerine erişebilir.
+
+GÜVENLİK:
+---------
+- Firebase Security Rules ile kullanıcılar sadece kendi verilerine erişebilir
+- Email/şifre ile authentication
+- Tüm veriler kullanıcı bazında ayrılmıştır
+
+TEST BİLGİLERİ:
+---------------
+Test için kullanılabilecek hesap:
+Email: deneme@gmail.com
+Şifre: deniz67
+
+APK DOSYASI:
+------------
+Proje EAS Build ile APK formatında derlenmiştir.
+APK dosyası test edilmiş ve çalışır durumdadır.
+
+NOTLAR:
+-------
+- Uygulama tamamen fonksiyonel durumda
+- Tüm özellikler test edilmiş
+- Veritabanı hataları giderilmiş
+- Kullanıcı deneyimi optimize edilmiş
+
+GELIŞTIRICI NOTLARI:
+--------------------
+Proje geliştirilirken Firebase Native SDK ile başlandı ancak Expo Go 
+uyumluluğu nedeniyle Firebase Web SDK'ya geçiş yapıldı. Bu sayede 
+uygulama Expo Go ile sorunsuz çalışmaktadır.
+
+İletişim: [Öğrenci bilgileri] 
