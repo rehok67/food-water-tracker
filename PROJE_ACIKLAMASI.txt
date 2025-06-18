@@ -53,6 +53,7 @@ TEST BİLGİLERİ:
 Test için kullanılabilecek hesap:
 Email: deneme@gmail.com
 Şifre: deniz67
+kendiniz de hesap oluşturabilirsiniz
 
 APK DOSYASI:
 ------------
